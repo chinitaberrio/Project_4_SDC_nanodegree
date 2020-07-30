@@ -2,7 +2,9 @@ import csv
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
 import sklearn
+
 
 lines = []
 with open('data/driving_log.csv') as csv_file:
@@ -31,7 +33,7 @@ def generator(samples, batch_size=32):
                 source_path = batch_sample[0]
                 filename = source_path.split('/')[-1]
                 current_path = 'data/IMG/' + filename
-                image = cv2.imread(current_path)
+                image = mpimg.imread(current_path)
                 images.append(image)
                 images.append(cv2.flip(image, 1))
                 angle = float(batch_sample[3])
@@ -41,14 +43,14 @@ def generator(samples, batch_size=32):
                 source_path = batch_sample[1]
                 filename = source_path.split('/')[-1]
                 current_path = 'data/IMG/' + filename
-                image = cv2.imread(current_path)
+                image = mpimg.imread(current_path)
                 images.append(image)
                 angles.append(angle+correction)
                 # right image
                 source_path = batch_sample[2]
                 filename = source_path.split('/')[-1]
                 current_path = 'data/IMG/' + filename
-                image = cv2.imread(current_path)
+                image = mpimg.imread(current_path)
                 images.append(image)
                 angles.append(angle - correction)
 
@@ -113,7 +115,7 @@ for sample in test_samples:
     source_path = sample[0]
     filename = source_path.split('/')[-1]
     current_path = 'new_data/IMG/' + filename
-    image = cv2.imread(current_path)
+    image = mpimg.imread(current_path)
     images_test.append(image)
     angle = float(sample[3])
     angles_test.append(angle)
