@@ -17,9 +17,9 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: Figure_1.png "train"
-[image2]: ./data/IMG/center_2016_12_01_13_30_48_404.jpg "centre"
-[image3]: /data/IMG/left_2016_12_01_13_30_48_404.jpg "centre"
-[image4]: /data/IMG/right_2016_12_01_13_30_48_404.jpg "centre"
+[image2]: ./data/IMG/center_2016_12_01_13_30_48_287.jpg "centre"
+[image3]: /data/IMG/left_2016_12_01_13_30_48_287.jpg "centre"
+[image4]: /data/IMG/right_2016_12_01_13_30_48_287.jpg "centre"
 
 
  
