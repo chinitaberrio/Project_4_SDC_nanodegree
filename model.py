@@ -82,13 +82,13 @@ model.add(Convolution2D(24, 5, 5, subsample=(2, 2), activation="relu"))
 model.add(Convolution2D(36, 5, 5, subsample=(2, 2), activation="relu"))
 # Dropout of 30% of the connections
 model.add(Dropout(0.3))
-# Fourth Convolutional layer
+# Thrid Convolutional layer
 model.add(Convolution2D(48, 5, 5, subsample=(2, 2), activation="relu"))
-# Fifth Convolutional layer
+# Fourth Convolutional layer
 model.add(Convolution2D(64, 3, 3, activation="relu"))
 # Dropout of 30% of the connections
 model.add(Dropout(0.3))
-# Sixth Convolutional layer
+# Fifth Convolutional layer
 model.add(Convolution2D(64, 3, 3, activation="relu"))
 # Flatten
 model.add(Flatten())
